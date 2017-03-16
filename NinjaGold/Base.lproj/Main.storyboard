@@ -1,26 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NinjaGold" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puF-aG-YU3">
+                                <rect key="frame" x="20" y="20" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDI-7h-yPA">
+                                <rect key="frame" x="28" y="57" width="47" height="30"/>
+                                <state key="normal" title="Farm"/>
+                                <connections>
+                                    <action selector="farmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rX3-VG-EFQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTl-kM-LJa">
+                                <rect key="frame" x="28" y="103" width="47" height="30"/>
+                                <state key="normal" title="Cave"/>
+                                <connections>
+                                    <action selector="caveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Had-Nh-wad"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tad-Vw-aZD">
+                                <rect key="frame" x="28" y="149" width="47" height="30"/>
+                                <state key="normal" title="House"/>
+                                <connections>
+                                    <action selector="houseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yh5-HU-uNX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjd-vz-AEh">
+                                <rect key="frame" x="28" y="195" width="47" height="30"/>
+                                <state key="normal" title="Casino"/>
+                                <connections>
+                                    <action selector="casinoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YF-XO-vZ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLU-H5-URz">
+                                <rect key="frame" x="20" y="375" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFP-mk-xsm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="farmLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQs-sl-DeC">
+                                <rect key="frame" x="168" y="61" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caveLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-KH-yWu">
+                                <rect key="frame" x="168" y="107" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="houseLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULi-SI-5l0">
+                                <rect key="frame" x="168" y="153" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="casinoLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-rY-v0M">
+                                <rect key="frame" x="168" y="199" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tad-Vw-aZD" firstAttribute="leading" secondItem="MTl-kM-LJa" secondAttribute="leading" id="0bG-VO-nqk"/>
+                            <constraint firstItem="ULi-SI-5l0" firstAttribute="leading" secondItem="MVq-KH-yWu" secondAttribute="leading" id="1IJ-N4-GuZ"/>
+                            <constraint firstItem="Wjd-vz-AEh" firstAttribute="width" secondItem="JDI-7h-yPA" secondAttribute="width" id="6Uv-Qh-t2D"/>
+                            <constraint firstItem="MTl-kM-LJa" firstAttribute="top" secondItem="JDI-7h-yPA" secondAttribute="bottom" constant="16" id="8fA-iz-R7U"/>
+                            <constraint firstItem="puF-aG-YU3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Aus-gu-n54"/>
+                            <constraint firstItem="MTl-kM-LJa" firstAttribute="leading" secondItem="JDI-7h-yPA" secondAttribute="leading" id="BUq-8P-Afj"/>
+                            <constraint firstItem="Wjd-vz-AEh" firstAttribute="leading" secondItem="tad-Vw-aZD" secondAttribute="leading" id="EQG-TK-Xy5"/>
+                            <constraint firstItem="JDI-7h-yPA" firstAttribute="top" secondItem="puF-aG-YU3" secondAttribute="bottom" constant="16" id="MJ2-MT-1Qv"/>
+                            <constraint firstItem="MVq-KH-yWu" firstAttribute="leading" secondItem="CQs-sl-DeC" secondAttribute="leading" id="Ogc-XZ-Na7"/>
+                            <constraint firstItem="tad-Vw-aZD" firstAttribute="baseline" secondItem="ULi-SI-5l0" secondAttribute="baseline" id="RXA-jP-elM"/>
+                            <constraint firstItem="Wjd-vz-AEh" firstAttribute="baseline" secondItem="nNb-rY-v0M" secondAttribute="baseline" id="TCH-Co-Js3"/>
+                            <constraint firstItem="CQs-sl-DeC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-43.5" id="Y13-kj-gBH"/>
+                            <constraint firstItem="MTl-kM-LJa" firstAttribute="width" secondItem="JDI-7h-yPA" secondAttribute="width" id="a9J-8c-OvQ"/>
+                            <constraint firstItem="tad-Vw-aZD" firstAttribute="top" secondItem="MTl-kM-LJa" secondAttribute="bottom" constant="16" id="cZ5-d1-3Oh"/>
+                            <constraint firstItem="nNb-rY-v0M" firstAttribute="leading" secondItem="ULi-SI-5l0" secondAttribute="leading" id="d3w-Wd-wQY"/>
+                            <constraint firstItem="kLU-H5-URz" firstAttribute="top" secondItem="Wjd-vz-AEh" secondAttribute="bottom" constant="150" id="dKh-zk-PvY"/>
+                            <constraint firstItem="puF-aG-YU3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ehR-dn-GPm"/>
+                            <constraint firstItem="MTl-kM-LJa" firstAttribute="baseline" secondItem="MVq-KH-yWu" secondAttribute="baseline" id="fav-EP-GbY"/>
+                            <constraint firstItem="kLU-H5-URz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="iaj-Vb-fqj"/>
+                            <constraint firstItem="Wjd-vz-AEh" firstAttribute="top" secondItem="tad-Vw-aZD" secondAttribute="bottom" constant="16" id="ilW-y0-QAw"/>
+                            <constraint firstItem="JDI-7h-yPA" firstAttribute="baseline" secondItem="CQs-sl-DeC" secondAttribute="baseline" id="jgi-4l-BXA"/>
+                            <constraint firstItem="tad-Vw-aZD" firstAttribute="width" secondItem="JDI-7h-yPA" secondAttribute="width" id="zOR-I8-Nca"/>
+                            <constraint firstItem="JDI-7h-yPA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="zOS-nN-Z1Z"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                    <connections>
+                        <outlet property="casinoGold" destination="nNb-rY-v0M" id="k9m-zH-494"/>
+                        <outlet property="caveGold" destination="MVq-KH-yWu" id="91J-md-SUe"/>
+                        <outlet property="currentGold" destination="puF-aG-YU3" id="z0a-dF-apz"/>
+                        <outlet property="farmGold" destination="CQs-sl-DeC" id="Q6t-ck-qIL"/>
+                        <outlet property="houseGold" destination="ULi-SI-5l0" id="7Kj-th-696"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-10" y="130"/>
         </scene>
     </scenes>
 </document>
